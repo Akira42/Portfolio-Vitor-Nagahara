@@ -2,36 +2,231 @@
   font-family: Montserrat;
   src: url(../assets/fonts/Montserrat.ttf);
 }
+@font-face {
+  font-family: Montserrat-italic;
+  src: url(../assets/fonts/Montserrat-italic.ttf);
+}
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: #BF495E;
   font-family: Montserrat;
   background-color: #190B20;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.color-blue {
+  color: #54AFC0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.f-100 {
+  font-weight: 100;
+}
+
+.f-200 {
+  font-weight: 200;
+}
+
+.f-300 {
+  font-weight: 300;
+}
+
+.f-400 {
+  font-weight: 400;
+}
+
+.f-500 {
+  font-weight: 500;
+}
+
+.f-600 {
+  font-weight: 600;
+}
+
+.f-bold, b {
+  font-weight: bold;
+}
+
+.f-italic {
+  font-family: Montserrat-italic;
+}
+
+.btn {
+  background: linear-gradient(150deg, rgb(75, 82, 193) 0%, rgb(154, 77, 195) 50%, rgb(191, 73, 94) 100%);
+  border-radius: 50px;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  color: #190B20;
+  font-weight: 600;
 }
 
 /*temp*/
-.intro-section {
+.parallax {
   height: 100vh;
-  background-image: url(../assets/images/layer-3.svg);
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-perspective: 300px;
+  perspective: 300px;
+}
+.parallax .parallax__group {
+  position: relative;
+  display: block;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.parallax .parallax__group .parallax__layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background-size: cover;
+}
+.parallax .parallax__group .parallax__layer--base {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  z-index: 4;
+  background-position: bottom;
+  background-image: url(../assets/images/layer-1.svg);
+}
+.parallax .parallax__group .parallax__layer--back {
+  -webkit-transform: translateZ(-300px) scale(2);
+  transform: translateZ(-300px) scale(2);
+  z-index: 3;
+  background-image: url(../assets/images/layer-2.svg);
+}
+.parallax .parallax__group .parallax__layer--deep {
+  -webkit-transform: translateZ(-400px) scale(3);
+  transform: translateZ(-400px) scale(3);
+  z-index: 2;
+  background-image: url(../assets/images/layer-3.svg);
+  background-position: bottom;
+}
+.parallax .parallax__group .parallax__layer--sun {
+  -webkit-transform: translateZ(-800px) scale(3);
+  transform: translateZ(-800px) scale(3);
+  z-index: 1;
+  background-size: 600px;
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-image: url(../assets/images/layer-4.svg);
+}
+.parallax .parallax__group .parallax__layer--hero {
+  z-index: 5;
+  max-width: 1440px;
+  margin: auto;
+  position: relative;
+  height: 100vh;
+}
+.parallax .parallax__group .parallax__layer--hero .hero-text-wrapper {
+  margin: auto;
+  top: 50%;
+  transform: translate(0, -50%);
+  position: absolute;
+  width: 66.33%;
+}
+.parallax .parallax__group .parallax__layer--hero .hero-text-wrapper .hero-title {
+  font-size: 60px;
+  line-height: 65px;
+  -webkit-text-stroke-width: 5px;
+  -webkit-text-stroke-color: #fff;
+  font-weight: 800;
+  background: -webkit-linear-gradient(150deg, rgb(75, 82, 193) 0%, rgb(154, 77, 195) 25%, rgb(84, 175, 192) 50%, rgb(88, 198, 113) 75%, rgb(191, 73, 94) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 5px transparent;
+  color: #190B20;
+  padding: 6px;
+}
+.parallax .parallax__group .parallax__layer--hero .hero-text-wrapper .hero-subtitle {
+  font-size: 30px;
+  margin: 0.5rem 0 1rem 0;
+}
+.parallax .parallax__group .parallax__layer--hero .hero-text-wrapper .hero-divisor {
+  width: 15%;
+  height: 5px;
+  background: -webkit-linear-gradient(150deg, rgb(75, 82, 193) 0%, rgb(154, 77, 195) 25%, rgb(84, 175, 192) 50%, rgb(88, 198, 113) 75%, rgb(191, 73, 94) 100%);
+}
+.parallax .parallax__group .parallax__layer--hero .hero-text-wrapper .hero-text {
+  margin-top: 1.5rem;
+  font-size: 20px;
+  line-height: 25px;
+}
+
+.content-wrapper {
+  background-color: #190B20;
+}
+.content-wrapper .content {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 7rem 0;
+}
+.content-wrapper .content .content-title {
+  font-size: 45px;
+  margin-bottom: 2rem;
+}
+.content-wrapper .content .experience-item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 5rem 0;
+}
+.content-wrapper .content .experience-item .experience-item-text {
+  flex: 0 0 70%;
+}
+.content-wrapper .content .experience-item .experience-item-text h3, .content-wrapper .content .experience-item .experience-item-text h4 {
+  font-size: 24px;
+  line-height: 29px;
+}
+.content-wrapper .content .experience-item .experience-item-text h4 {
+  margin-top: 0.3rem;
+}
+.content-wrapper .content .experience-item .experience-item-text p, .content-wrapper .content .experience-item .experience-item-text ul {
+  margin-top: 1rem;
+}
+.content-wrapper .content .experience-item .experience-item-text ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+.content-wrapper .content .experience-item .experience-item-text ul li {
+  margin-top: 1rem;
+  margin-right: 1rem;
+}
+.content-wrapper .content .experience-item .experience-item-image {
+  flex: 0 0 20%;
   position: relative;
 }
-
-.intro-mask {
+.content-wrapper .content .experience-item .experience-item-image a img {
+  transform: translate(0, -50%);
+  top: 50%;
   position: absolute;
-  inset: 0;
-  background-color: rgba(255, 0, 0, 0.25);
-  -webkit-mask: url(../assets/images/mask-3.svg);
-  -webkit-mask-size: 100%;
-  mask: url(../assets/images/mask-3.svg);
-  mask-size: cover;
+  max-width: calc(100% - 2rem);
+  background: -webkit-linear-gradient(150deg, rgb(75, 82, 193) 0%, rgb(154, 77, 195) 25%, rgb(84, 175, 192) 50%, rgb(88, 198, 113) 75%, rgb(191, 73, 94) 100%);
+  padding: 3rem 1rem 1rem;
+  -webkit-box-shadow: 10px 10px 0px 0px rgb(93, 46, 118);
+  -moz-box-shadow: 10px 10px 0px 0px rgb(93, 46, 118);
+  box-shadow: 10px 10px 0px 0px rgb(93, 46, 118);
 }
-
-.intro-sun {
-  color: #BF495E;
-  position: fixed;
-  text-align: center;
-  width: 100%;
-  font-size: 9rem;
+.content-wrapper .content .experience-item-left .experience-item-text {
+  text-align: left;
+}
+.content-wrapper .content .experience-item-left .experience-item-image img {
+  right: 0;
+}
+.content-wrapper .content .experience-item-right .experience-item-text {
+  text-align: right;
+}
+.content-wrapper .content .experience-item-right .experience-item-text ul {
+  justify-content: end;
+}
+.content-wrapper .content .experience-item-right .experience-item-image img {
+  left: 0;
 }
 
 .footer-tagline {
