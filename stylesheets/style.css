@@ -229,6 +229,11 @@ a {
   left: 0;
 }
 
+.footer .footer-tagline span {
+  display: block;
+  margin: 2rem 0;
+}
+
 .footer-tagline {
   text-align: center;
   margin: 1rem 0;
