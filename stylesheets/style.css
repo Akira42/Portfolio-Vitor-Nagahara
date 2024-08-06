@@ -1,0 +1,42 @@
+@font-face {
+  font-family: Montserrat;
+  src: url(../assets/fonts/Montserrat.ttf);
+}
+body {
+  color: #BF495E;
+  font-family: Montserrat;
+  background-color: #190B20;
+}
+
+/*temp*/
+.intro-section {
+  height: 100vh;
+  background-image: url(../assets/images/layer-3.svg);
+  background-size: cover;
+  position: relative;
+}
+
+.intro-mask {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 0, 0, 0.25);
+  -webkit-mask: url(../assets/images/mask-3.svg);
+  -webkit-mask-size: 100%;
+  mask: url(../assets/images/mask-3.svg);
+  mask-size: cover;
+}
+
+.intro-sun {
+  color: #BF495E;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  font-size: 9rem;
+}
+
+.footer-tagline {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+/*# sourceMappingURL=style.css.map */
