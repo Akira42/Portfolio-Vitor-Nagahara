@@ -3,3 +3,7 @@
     flex-wrap: wrap;
 }
   
+@mixin font-20px{
+    font-size:  clamp(16px, 1vw, 1.2vw);
+    line-height:  clamp(21px, 1.2vw, 1.4vw);
+}

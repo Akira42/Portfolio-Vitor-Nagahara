@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vitor Nagahara - Portfolio</title>
-    
+    <title>Vitor Nagahara - Portfólio</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/logos/logo.svg">
     <link rel="stylesheet" href="stylesheets/reset.css">
     <link rel="stylesheet" href="stylesheets/style.css">
-
+    
     <script src="javascript/main.js"></script>
 </head>
 
@@ -60,7 +60,7 @@
                 <p class="hero-text"> Desenvolvedor front-end com experiência nas plataformas de e-commerce <b><a class="color-blue" href="https://www.vnda.com.br/" target="_blank" rel="no-follow">VNDA</a>, <a class="color-blue" href="https://www.shopify.com/" target="_blank" rel="no-follow">Shopify</a>, <a class="color-blue" href="https://betalabs.com.br/" target="_blank" rel="no-follow">Betalabs</a>, <a class="color-blue" href="https://woocommerce.com/" target="_blank" rel="no-follow">Woocommerce</a> e <a class="color-blue" href="https://flexy.com.br/" target="_blank" rel="no-follow">Flexy</a></b>, assim como as stacks <b>Liquid, Javascript, HTML, SCSS e PHP</b>. também possui experiência em desenvolvimento de sites em wordpress e conhecimento em <b>prototipagem</b>, <b>UI e UX</b>.</p>
 
                 <div class="hero-btns">
-                  <a href="#" class="btn-2">Download CV</a> <a href="#contato" class="btn-2">Contato</a>
+                  <a href="assets/files/Currículo Vitor Akira Nagahara.pdf" target="_blank" download="Currículo Vitor Akira Nagahara.pdf" class="btn-2">Download CV</a> <a href="#contato" class="btn-2">Contato</a>
                 </div>
               </div>
             </div>
@@ -68,7 +68,8 @@
 
         <div class="parallax__group content-wrapper">
           <div class="content">
-            <h2 id="experiencia" class="content-title color-blue f-500">experiência</h2>
+            <span id="experiencia" class="anchor"></span>
+            <h2 class="content-title color-blue f-500">experiência</h2>
 
             <div class="divisor"></div>
 
@@ -157,35 +158,36 @@
           </div> 
 
           <div class="content">
-            <h2 id="projetos" class="content-title color-red f-500">projetos</h2>
+            <span id="projetos" class="anchor"></span>
+            <h2 class="content-title color-red f-500">projetos</h2>
 
             <div class="divisor"></div>
 
             <ul class="projects-list">
               <li class="window-img">
                 <h3>Dentro Super Foods</h3>
-                <a href="#" target="_blank">
+                <a href="https://www.dentrosuperfoods.com.br/" target="_blank" rel="no-follow">
                   <img src="assets/images/thumb-dentro.png">
                 </a>
               </li>
 
               <li class="window-img">
                 <h3>Schizzibooks</h3>
-                <a href="#" target="_blank">
+                <a href="https://www.schizzibooks.com.br/" target="_blank" rel="no-follow">
                   <img src="assets/images/thumb-schizzi.png">
                 </a>
               </li>
 
               <li class="window-img">
                 <h3>Casa Tavolo</h3>
-                <a href="#" target="_blank">
+                <a href="https://www.casatavolo.com.br/" target="_blank" rel="no-follow">
                   <img src="assets/images/thumb-casatavolo.png">
                 </a>
               </li>
 
               <li class="window-img">
                 <h3>Gol Coletivo</h3>
-                <a href="#" target="_blank">
+                <a href="https://www.golcoletivo.com.br/" target="_blank" rel="no-follow">
                   <img src="assets/images/thumb-golcoletivo.png">
                 </a>
               </li>
@@ -195,7 +197,8 @@
           </div>
 
           <div class="content section-skills">
-            <h2 id="skills" class="content-title color-purple f-500">skills</h2>
+            <span id="skills" class="anchor"></span>
+            <h2 class="content-title color-purple f-500">skills</h2>
 
             <div class="divisor"></div>
 
@@ -204,6 +207,9 @@
               <li class="btn">SCSS</li>
               <li class="btn">Javascript</li>
               <li class="btn">Liquid</li>
+              <li class="btn">Bootstrap</li>
+              <li class="btn">CSS Flex box</li>
+              <li class="btn">Slick Slider</li>
               <li class="btn">PHP</li>
               <li class="btn">Twig</li>
               <li class="btn">Laravel Blade</li>
@@ -216,37 +222,47 @@
           </div>
 
           <div class="content">
-            <h2 id="contato" class="content-title color-green f-500">contato</h2>
+            <span id="contato" class="anchor"></span>
+            <h2 class="content-title color-green f-500">contato</h2>
 
             <div class="divisor"></div>
 
             <div class="contact-cards">
-              <a class="contact-card-item" href="mailto:vitorakira42@gmail.com" target="_blank" rel="no-follow">
-                <img src="assets/images/icon-email.svg">
+              <a class="contact-card-item window-img" href="mailto:vitorakira42@gmail.com" target="_blank" rel="no-follow">
+                <div class="contact-card-item-wrapper">
+                  <img src="assets/images/icon-email.svg">
 
-                <h3>e-mail</h3>
-                <span class="color-red">vitorakira42@gmail.com</span>
+                  <h3>e-mail</h3>
+                  <span class="color-red">vitorakira42@gmail.com</span>
+
+                </div>
               </a>
 
-              <a class="contact-card-item" href="tel:+55 11 98136-0574" target="_blank" rel="no-follow">
-                <img src="assets/images/icon_phone.svg">
+              <a class="contact-card-item window-img" href="tel:+55 11 98136-0574" target="_blank" rel="no-follow">
+                <div class="contact-card-item-wrapper">
+                  <img src="assets/images/icon_phone.svg">
 
-                <h3>Telefone</h3>
-                <span class="color-red">+55 11 98136-0574</span>
+                  <h3>Telefone</h3>
+                  <span class="color-red">+55 11 98136-0574</span>
+                </div>
               </a>
             
-              <a class="contact-card-item" href="https://github.com/Akira42" target="_blank" rel="no-follow">
-                <img src="assets/images/logos/logo-github.svg">
+              <a class="contact-card-item window-img" href="https://github.com/Akira42" target="_blank" rel="no-follow">
+                <div class="contact-card-item-wrapper">
+                  <img src="assets/images/logos/logo-github.svg">
 
-                <h3>Github</h3>
-                <span class="color-red">@Akira42</span>
+                  <h3>Github</h3>
+                  <span class="color-red">@Akira42</span>
+                </div>
               </a>
 
-              <a class="contact-card-item" href="https://www.linkedin.com/in/vitor-nagahara/" target="_blank" rel="no-follow">
-                <img src="assets/images/logos/logo-linkedin.svg">
+              <a class="contact-card-item window-img" href="https://www.linkedin.com/in/vitor-nagahara/" target="_blank" rel="no-follow">
+                <div class="contact-card-item-wrapper">
+                  <img src="assets/images/logos/logo-linkedin.svg">
 
-                <h3>LinkedIn</h3>
-                <span class="color-red">/in/vitor-nagahara/</span>
+                  <h3>LinkedIn</h3>
+                  <span class="color-red">/in/vitor-nagahara/</span>
+                </div>
               </a>
             </div>
           </div>
@@ -255,7 +271,7 @@
 
         <div class="footer">
           <div class="footer-tagline">
-            <p class="f-italic">Made in Brazil with love (as well as HTML, SCSS and Javascript) <br /> designed in <a class="color-blue" href="https://www.figma.com/" target="_blank" rel="no-follow">Figma</a> and brought to reality in <a class="color-blue" href="https://code.visualstudio.com/" target="_blank" rel="no-follow">Visual Studio Code</a>. all text is in the <a class="color-blue" href="https://fonts.google.com/specimen/Montserrat" target="_blank" rel="no-follow">Montserrat</a> typeface under the <a class="color-blue" href="https://openfontlicense.org/" target="_blank" rel="no-follow">SIL Open Font License</a>.</p>
+            <p class="f-italic">Made in Brazil with love (as well as HTML, SCSS and Vanilla Javascript) <br /> designed in <a class="color-blue" href="https://www.figma.com/" target="_blank" rel="no-follow">Figma</a> and brought to reality in <a class="color-blue" href="https://code.visualstudio.com/" target="_blank" rel="no-follow">Visual Studio Code</a>. all text is in the <a class="color-blue" href="https://fonts.google.com/specimen/Montserrat" target="_blank" rel="no-follow">Montserrat</a> typeface under the <a class="color-blue" href="https://openfontlicense.org/" target="_blank" rel="no-follow">SIL Open Font License</a>.</p>
             
             <span>© Copyright 2024 by Vitor Nagahara</span>
 

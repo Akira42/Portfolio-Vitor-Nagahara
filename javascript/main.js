@@ -1,14 +1,14 @@
 document.addEventListener('DOMContentLoaded', function() {
-    var mainElement = document.querySelector('main'); // Select the <main> element
+    var mainElement = document.querySelector('main');
 
     mainElement.addEventListener('scroll', function() {
-        var scroll = mainElement.scrollTop; // Get the vertical scroll position within the main element
-        var header = document.querySelector('.header'); // Select the .header element
+        var scroll = mainElement.scrollTop;
+        var header = document.querySelector('.header');
 
         if (scroll >= 60) {
-            header.classList.add('scrolled'); // Adds the 'fixed' class
+            header.classList.add('scrolled');
         } else {
-            header.classList.remove('scrolled'); // Removes the 'fixed' class
+            header.classList.remove('scrolled');
         }
     });
 });

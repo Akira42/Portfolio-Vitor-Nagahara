@@ -8,8 +8,13 @@
     src: url(../assets/fonts/Montserrat-italic.ttf);
 }
 
-html, #experiencia, #projetos, #skills {
+html, main {
     scroll-behavior: smooth;
+}
+
+.anchor {
+    position: absolute;
+    top: -100px;
 }
 
 ::-webkit-scrollbar {
@@ -37,8 +42,8 @@ body {
     font-family: Montserrat;
     background-color: $bg-color;
 
-    font-size: 16px;
-    line-height: 20px;
+    font-size : clamp(13px, .8vw, 1vw);
+    line-height: clamp(18px, 1vw, 1.2vw);
 }
 
 .color-light-blue {color: $light-blue;}
@@ -84,8 +89,8 @@ a {
     margin-right: 1.5rem;
 
     ul li a {
-        font-size: 30px;
-        line-height: 35px;
+        font-size: clamp(16px, 1.2vw, 1.4vw);
+        line-height: clamp(21px, 1.4vw, 1.6vw);
         font-weight: 500;
     }
 }
@@ -128,6 +133,7 @@ a {
     -webkit-box-shadow: 10px 10px 0px 0px rgba(93,46,118,1);
     -moz-box-shadow: 10px 10px 0px 0px rgba(93,46,118,1);
     box-shadow: 10px 10px 0px 0px rgba(93,46,118,1);
+    transition: .3s;
 
     a {
         position:relative;
@@ -150,11 +156,15 @@ a {
         right: 1rem;
         transition: .4s;
     }
+    
+    &:hover {
+        transform: rotate(-5deg);
+        transition: .3s;
+    }
 
     h3 {
-        color: $bg-color;
-        font-size: 20px;
-        line-height: 25px;
+        color: $purple;
+        @include font-20px;
     }
 }
 
@@ -232,8 +242,8 @@ a {
                 width: 66.33%;
 
                 .hero-title {
-                    font-size: 60px;
-                    line-height: 65px;
+                    font-size: clamp(40px, 3.3vw, 3.5vw);
+                    line-height: clamp(45px, 3.55vw, 3.75vw);
                     -webkit-text-stroke-width: 5px;
                     -webkit-text-stroke-color: #fff;
                     font-weight: 800;
@@ -247,14 +257,14 @@ a {
                 }
     
                 .hero-subtitle {
-                    font-size: 30px;
-                    line-height: 35px;
+                    font-size:  clamp(18px, 1.5vw, 1.7vw);
+                    line-height:  clamp(23px, 1.7vw, 1.9vw);
                 }
     
                 .hero-text {
                     margin-top: 1.5rem;
-                    font-size: 20px;
-                    line-height: 25px;
+                    font-size:  clamp(16px, 1vw, 1.2vw);
+                    line-height:  clamp(21px, 1.2vw, 1.4vw);
                 }
 
                 .hero-btns {
@@ -309,10 +319,11 @@ a {
         max-width: 1440px;
         margin:0 auto;
         padding: 2rem 0;
+        position:relative;
 
         .content-title {
-            font-size: 45px;
-            line-height: 50px;
+            font-size:  clamp(30px, 2vw, 2.2vw);
+            line-height:  clamp(35px, 2.2vw, 2.4vw);
         }
 
         .experience-item {
@@ -324,8 +335,8 @@ a {
                 flex: 0 0 70%;
 
                 h3, h4 {
-                    font-size: 24px;
-                    line-height: 29px;
+                    font-size:  clamp(18px, 1.2vw, 1.4vw);
+                    line-height:  clamp(21px, 1.4vw, 1.6vw);
                 }
 
                 h4 {
@@ -403,8 +414,7 @@ a {
         
         h3 {
             color: #190B20;
-            font-size: 19px;
-            line-height: 24px;
+            @include font-20px;
             font-weight: 600;
             position: absolute;
             top: 12px;
@@ -423,16 +433,22 @@ a {
 
 .contact-cards {
     @include d-flex-wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
 
     margin: 3rem 0;
 
     .contact-card-item {
         display: block;
         text-align: center;
+        flex: 0 0 20%;
+        position: relative;
+        
+        .contact-card-item-wrapper {
+            padding: 2rem 0;
+            background-color: $bg-color;
+        }
         h3 {
-            font-size: 20px;
-            line-height: 25px;
+            @include font-20px;
             font-weight: 500;
             margin-top:1rem;
         }
@@ -463,50 +479,27 @@ a {
     }
 }
 
-@media(max-width: 1440px) {
+@media only screen and (max-width: 1440px) {
     .content-wrapper .content, .header .content, .parallax .parallax__group .parallax__layer--hero, .footer {
         padding: 2rem 15px;
     }
 }
 
-@media(max-width: 1366px) {
+@media only screen and (max-width: 1366px) {
     .projects-list li {
         flex: 0 0 30%;
     }
 }
 
-@media(max-width: 992px) {
+@media only screen and (max-width: 992px) {
     .projects-list li {
-        flex: 0 0 47%;
+        flex: 0 0 45%;
     }
-
-    body, .parallax .parallax__group .parallax__layer--hero .hero-text-wrapper .hero-text {
-        font-size: 12px;
-        line-height: 17px;
-    }
-
-    .parallax .parallax__group .parallax__layer--hero .hero-text-wrapper .hero-title {
-        font-size: 30px;
-        line-height: 35px;
-        -webkit-text-stroke-width: 2px;
-        -webkit-text-stroke: 2px transparent;
-    }
-    
-    .parallax .parallax__group .parallax__layer--hero .hero-text-wrapper .hero-subtitle, .header-menu ul li a, .content-wrapper .content .experience-item .experience-item-text h3, .content-wrapper .content .experience-item .experience-item-text h4 {
-        font-size: 16px;
-        line-height: 21px;
-    }
-
-    .content-wrapper .content .content-title {
-        font-size: 20px;
-        line-height: 25px;
-    }
-
 }
 
-@media(max-width: 768px) {
+@media only screen and (max-width: 768px) {
     .contact-card-item {
-        flex: 0 0 49%;
+        flex: 0 0 47%;
         padding: 1rem 0;
     }
 
@@ -538,16 +531,31 @@ a {
     }
 }
 
-@media(max-width: 560px) {
-    .content-wrapper .content .experience-item .experience-item-text, .content-wrapper .content .experience-item .experience-item-image, .content-wrapper .content .experience-item .experience-item-image:hover {
-        flex: 0 0 100%;
-    }
-
-    .projects-list li {
+@media only screen and (max-width: 560px) {
+    .content-wrapper .content .experience-item .experience-item-text, .content-wrapper .content .experience-item .experience-item-image, .content-wrapper .content .experience-item .experience-item-image:hover, .projects-list li {
         flex: 0 0 100%;
     }
 
     .content-wrapper .content .experience-item-right{
         flex-direction: column-reverse;
+    }
+}
+
+.project-modal {
+    position:fixed;
+    top:50%;
+    left: 50%;
+    transform:translate(-50%, -50%);
+    background: $red;
+    max-width: 90%;
+}
+
+.project-page {
+    margin-top: 7rem;
+}
+
+.project-page {
+    img {
+        width: 100%;
     }
 }
