@@ -190,8 +190,8 @@ a:hover {
 }
 .window-img h3 {
   color: #9A4DC3;
-  font-size: clamp(16px, 1vw, 1.2vw);
-  line-height: clamp(21px, 1.2vw, 1.4vw);
+  font-size: clamp(12px, 0.8vw, 1.2vw);
+  line-height: clamp(17px, 1vw, 1.4vw);
 }
 
 /*temp*/
@@ -278,8 +278,8 @@ a:hover {
 }
 .parallax .parallax__group .parallax__layer--hero .hero-text-wrapper .hero-text {
   margin-top: 1.5rem;
-  font-size: clamp(16px, 1vw, 1.2vw);
-  line-height: clamp(21px, 1.2vw, 1.4vw);
+  font-size: clamp(12px, 0.8vw, 1.2vw);
+  line-height: clamp(17px, 1vw, 1.4vw);
 }
 .parallax .parallax__group .parallax__layer--hero .hero-text-wrapper .hero-btns {
   padding-top: 2rem;
@@ -392,7 +392,7 @@ a:hover {
   justify-content: space-between;
 }
 .projects-list li {
-  flex: 0 0 22%;
+  flex: 0 0 30%;
 }
 .projects-list .window-img {
   position: relative;
@@ -400,8 +400,8 @@ a:hover {
 }
 .projects-list .window-img h3 {
   color: #190B20;
-  font-size: clamp(16px, 1vw, 1.2vw);
-  line-height: clamp(21px, 1.2vw, 1.4vw);
+  font-size: clamp(12px, 0.8vw, 1.2vw);
+  line-height: clamp(17px, 1vw, 1.4vw);
   font-weight: 600;
   position: absolute;
   top: 12px;
@@ -429,8 +429,8 @@ a:hover {
   background-color: #190B20;
 }
 .contact-cards .contact-card-item h3 {
-  font-size: clamp(16px, 1vw, 1.2vw);
-  line-height: clamp(21px, 1.2vw, 1.4vw);
+  font-size: clamp(12px, 0.8vw, 1.2vw);
+  line-height: clamp(17px, 1vw, 1.4vw);
   font-weight: 500;
   margin-top: 1rem;
 }
