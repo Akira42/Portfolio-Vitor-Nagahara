@@ -93,6 +93,23 @@ a {
         line-height: clamp(21px, 1.4vw, 1.6vw);
         font-weight: 500;
     }
+
+    ul li {
+        &:after {
+            content:"";
+            width: 0;
+            height: 2px;
+            background: linear-gradient($gradient-1-150);
+            display: block;
+            transition: .3s;
+        }
+
+        &:hover:after {
+            width: 50px;
+            transition: .3s;
+        }
+    }
+    
 }
 
 .btn, .btn-2 {

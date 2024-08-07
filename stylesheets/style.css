@@ -125,6 +125,18 @@ a:hover {
   line-height: clamp(21px, 1.4vw, 1.6vw);
   font-weight: 500;
 }
+.header-menu ul li:after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background: linear-gradient(150deg, rgb(75, 82, 193) 0%, rgb(154, 77, 195) 25%, rgb(84, 175, 192) 50%, rgb(88, 198, 113) 75%, rgb(191, 73, 94) 100%);
+  display: block;
+  transition: 0.3s;
+}
+.header-menu ul li:hover:after {
+  width: 50px;
+  transition: 0.3s;
+}
 
 .btn, .btn-2 {
   background: linear-gradient(150deg, rgb(75, 82, 193) 0%, rgb(154, 77, 195) 50%, rgb(191, 73, 94) 100%);
