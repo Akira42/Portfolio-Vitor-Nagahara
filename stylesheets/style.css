@@ -6,8 +6,32 @@
   font-family: Montserrat-italic;
   src: url(../assets/fonts/Montserrat-italic.ttf);
 }
-html {
+html, #experiencia, #projetos, #skills {
   scroll-behavior: smooth;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: #25132f;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(150deg, rgb(75, 82, 193) 0%, rgb(154, 77, 195) 50%, rgb(191, 73, 94) 100%);
+  border-radius: 10px;
+  transition: 0.3s;
+  z-index: 10;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(300deg, rgb(75, 82, 193) 0%, rgb(154, 77, 195) 50%, rgb(191, 73, 94) 100%);
+  transition: 0.3s;
 }
 
 body {
@@ -18,12 +42,33 @@ body {
   line-height: 20px;
 }
 
-.color-blue {
+.color-light-blue {
   color: #54AFC0;
+}
+
+.color-blue {
+  color: #4b52c1;
+}
+
+.color-green {
+  color: #43ff64;
+}
+
+.color-red {
+  color: #BF495E;
+}
+
+.color-purple {
+  color: #9A4DC3;
 }
 
 a {
   text-decoration: none;
+  transition: 0.3s;
+  color: #4b52c1;
+}
+a:hover {
+  color: #43ff64;
 }
 
 .f-100 {
@@ -58,13 +103,90 @@ a {
   font-family: Montserrat-italic;
 }
 
-.btn {
+.header {
+  transition: 0.5s;
+}
+
+.header.scrolled {
+  transition: 0.5s;
+  background: rgba(25, 11, 32, 0.8);
+  backdrop-filter: blur(5px);
+  -webkit-box-shadow: 10px 10px 25px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 25px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 25px 0px rgba(0, 0, 0, 0.75);
+}
+
+.header-menu {
+  margin-right: 1.5rem;
+}
+.header-menu ul li a {
+  font-size: 30px;
+  line-height: 35px;
+  font-weight: 500;
+}
+
+.btn, .btn-2 {
   background: linear-gradient(150deg, rgb(75, 82, 193) 0%, rgb(154, 77, 195) 50%, rgb(191, 73, 94) 100%);
   border-radius: 50px;
   border: none;
-  padding: 0.5rem 1.5rem;
+  padding: 0.4rem 1.3rem;
   color: #190B20;
   font-weight: 600;
+  transition: 0.3s;
+}
+.btn:hover, .btn-2:hover {
+  background: linear-gradient(300deg, rgb(75, 82, 193) 0%, rgb(154, 77, 195) 50%, rgb(191, 73, 94) 100%);
+  color: #fff;
+}
+
+.btn-2 {
+  background: linear-gradient(300deg, rgb(84, 175, 192) 0%, rgb(154, 77, 195) 100%);
+}
+.btn-2:hover {
+  background: linear-gradient(150deg, rgb(84, 175, 192) 0%, rgb(154, 77, 195) 100%);
+}
+
+.divisor {
+  width: 150px;
+  height: 4px;
+  background: -webkit-linear-gradient(150deg, rgb(75, 82, 193) 0%, rgb(154, 77, 195) 25%, rgb(84, 175, 192) 50%, rgb(88, 198, 113) 75%, rgb(191, 73, 94) 100%);
+  margin: 5px 0;
+}
+
+.window-img {
+  max-width: calc(100% - 1rem);
+  background: -webkit-linear-gradient(150deg, rgb(75, 82, 193) 0%, rgb(154, 77, 195) 25%, rgb(84, 175, 192) 50%, rgb(88, 198, 113) 75%, rgb(191, 73, 94) 100%);
+  padding: 3rem 0.5rem 0.5rem;
+  -webkit-box-shadow: 10px 10px 0px 0px rgb(93, 46, 118);
+  -moz-box-shadow: 10px 10px 0px 0px rgb(93, 46, 118);
+  box-shadow: 10px 10px 0px 0px rgb(93, 46, 118);
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.window-img a {
+  position: relative;
+}
+.window-img a img {
+  width: 100%;
+}
+.window-img:after {
+  content: "";
+  background-image: url(../assets/images/window-squares.svg);
+  width: 75px;
+  height: 20px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: block;
+  position: absolute;
+  top: 16px;
+  right: 1rem;
+  transition: 0.4s;
+}
+.window-img:hover:after {
+  transition: 0.4s;
+  width: 82.5px;
+  height: 22px;
 }
 
 /*temp*/
@@ -143,20 +265,47 @@ a {
   -webkit-text-stroke: 5px transparent;
   color: #190B20;
   padding: 6px;
+  letter-spacing: 4px;
 }
 .parallax .parallax__group .parallax__layer--hero .hero-text-wrapper .hero-subtitle {
   font-size: 30px;
-  margin: 0.5rem 0 1rem 0;
-}
-.parallax .parallax__group .parallax__layer--hero .hero-text-wrapper .hero-divisor {
-  width: 15%;
-  height: 5px;
-  background: -webkit-linear-gradient(150deg, rgb(75, 82, 193) 0%, rgb(154, 77, 195) 25%, rgb(84, 175, 192) 50%, rgb(88, 198, 113) 75%, rgb(191, 73, 94) 100%);
+  line-height: 35px;
 }
 .parallax .parallax__group .parallax__layer--hero .hero-text-wrapper .hero-text {
   margin-top: 1.5rem;
   font-size: 20px;
   line-height: 25px;
+}
+.parallax .parallax__group .parallax__layer--hero .hero-text-wrapper .hero-btns {
+  padding-top: 2rem;
+}
+.parallax .parallax__group .parallax__layer--hero .hero-text-wrapper .hero-btns .btn-2 {
+  margin-right: 1rem;
+}
+
+.header {
+  z-index: 9;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.header .content {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+.header .content .header-menu-wrapper {
+  display: flex;
+  align-items: center;
+}
+.header .content .header-menu-wrapper ul {
+  display: flex;
+}
+.header .content .header-menu-wrapper ul li {
+  margin-right: 1rem;
 }
 
 .content-wrapper {
@@ -165,17 +314,17 @@ a {
 .content-wrapper .content {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 7rem 0;
+  padding: 2rem 0;
 }
 .content-wrapper .content .content-title {
   font-size: 45px;
-  margin-bottom: 2rem;
+  line-height: 50px;
 }
 .content-wrapper .content .experience-item {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 5rem 0;
+  padding: 3.5rem 0;
 }
 .content-wrapper .content .experience-item .experience-item-text {
   flex: 0 0 70%;
@@ -201,29 +350,13 @@ a {
 .content-wrapper .content .experience-item .experience-item-image {
   flex: 0 0 20%;
   position: relative;
+  transition: 0.4s;
 }
-.content-wrapper .content .experience-item .experience-item-image a img {
-  transform: translate(0, -50%);
-  top: 50%;
-  position: absolute;
-  max-width: calc(100% - 2rem);
-  background: -webkit-linear-gradient(150deg, rgb(75, 82, 193) 0%, rgb(154, 77, 195) 25%, rgb(84, 175, 192) 50%, rgb(88, 198, 113) 75%, rgb(191, 73, 94) 100%);
-  padding: 3rem 1rem 1rem;
-  -webkit-box-shadow: 10px 10px 0px 0px rgb(93, 46, 118);
-  -moz-box-shadow: 10px 10px 0px 0px rgb(93, 46, 118);
-  box-shadow: 10px 10px 0px 0px rgb(93, 46, 118);
-}
-.content-wrapper .content .experience-item-left .experience-item-text {
-  text-align: left;
+.content-wrapper .content .experience-item .experience-item-image:hover {
+  flex: 0 0 22%;
 }
 .content-wrapper .content .experience-item-left .experience-item-image img {
   right: 0;
-}
-.content-wrapper .content .experience-item-right .experience-item-text {
-  text-align: right;
-}
-.content-wrapper .content .experience-item-right .experience-item-text ul {
-  justify-content: end;
 }
 .content-wrapper .content .experience-item-right .experience-item-image img {
   left: 0;
