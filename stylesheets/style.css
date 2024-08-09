@@ -507,7 +507,7 @@ a:hover {
   .parallax .parallax__group .parallax__layer--hero .hero-text-wrapper {
     width: calc(100% - 30px);
   }
-  .header-menu-wrapper {
+  .header-menu {
     display: none !important;
   }
 }
